@@ -1,5 +1,8 @@
 package hu.petrik.emberekoop;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         Ember e1 = new Ember("Gipsz Jakab", "1988-1-12", "Budapest");
@@ -9,7 +12,15 @@ public class Main {
         Ember e5 = new Ember("Kovács Dóra", "1999-12-31", "Miskolc");
         Ember[] emberTomb = new Ember[]{e1, e2, e3, e4, e5};
         Emberek ek = new Emberek(emberTomb);
-        System.out.println(ek);
+        String fajlNev = "emberek.txt";
+        try {
+            Emberek ek2 = new Emberek(fajlNev);
+            System.out.println(ek2);
+        } catch (FileNotFoundException e) {
+            System.out.printf("A(z) %s nem található\n", fajlNev);
+        } catch (IOException e) {
+            System.out.println("Ismeretlen hiba történt");
+        }
 
     }
 }

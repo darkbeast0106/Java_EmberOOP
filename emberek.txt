@@ -254,3 +254,4 @@ Vidó Gábor;1988-6-16;Budapest
 Pénzes Réka;1978-11-16;Székesfehérvár
 Juhos Gábor;1983-5-12;Székesfehérvár
 Csutorás Dorottya;1961-3-17;Miskolc
+
